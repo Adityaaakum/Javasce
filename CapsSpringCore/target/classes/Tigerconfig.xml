@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<import resource="personconfig.xml"/>	
+<bean id="tiger" class="com.capgem.dev.spring.xmlconstr.Tiger" >
+
+<constructor-arg name="id" value="1000"></constructor-arg>
+<constructor-arg name="name">
+
+<list>
+
+<value>vvvv</value>
+<value>kkkkk</value>
+
+
+
+</list>
+
+
+
+</constructor-arg>
+<!--<constructor-arg name="pink" ref="pink"></constructor-arg>-->
+</bean>
+<!-- it is not an error -->
+
+
+<bean id="pink" class="com.capgem.dev.spring.xmlconstr.PinkPanther">
+
+
+
+</bean>
+
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="person" class="com.capgem.dev.spring.xml.Person" init-method="initcustom" destroy-method="customDestroy"  scope="prototype">
+
+<property name="age" value="25"></property>
+<property name="id" value="22"></property>
+<property name="name" value="bbbb"></property>
+<property name="job">
+
+<list>
+
+<ref bean="developer"/>
+<ref bean="tester"/>
+</list>
+
+</property>
+</bean>
+<bean id="developer" class="com.capgem.dev.spring.xml.Softwaredev"></bean>
+<bean id="tester" class="com.capgem.dev.spring.xml.Testt"></bean>
+
+
+
+</beans>
